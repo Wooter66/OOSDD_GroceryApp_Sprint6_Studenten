@@ -4,18 +4,18 @@
              xmlns:vm="clr-namespace:Grocery.App.ViewModels"
              x:Class="Grocery.App.Views.ProductView"
              Title="ProductView">
-    
-    <Shell.TitleView>
-        <Grid>
-            <Label Text="Producten" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Center" />
-        </Grid>
-    </Shell.TitleView>
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Nieuw product"
                      IconImageSource="plus.png"
                      Clicked="OnAddProductClicked" />
     </ContentPage.ToolbarItems>
+
+    <Shell.TitleView>
+        <Grid>
+            <Label Text="Producten" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Center" />
+        </Grid>
+    </Shell.TitleView>
 
     <Border Stroke="#C49B33" StrokeThickness="4" Padding="10" Margin="10" HorizontalOptions="Center">
         <CollectionView ItemsSource="{Binding Products}" Margin="20" HorizontalOptions="Center">
