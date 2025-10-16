@@ -15,5 +15,11 @@ namespace Grocery.App.ViewModels
             Products = [];
             foreach (Product p in _productService.GetAll()) Products.Add(p);
         }
+
+        public override void OnAppearing()
+        {
+            base.OnAppearing();
+            Products = new(_productService.GetAll());
+        }
     }
 }
